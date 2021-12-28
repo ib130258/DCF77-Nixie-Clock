@@ -26,3 +26,11 @@ Files:
 - sketch ESP8266: ESP8266_wifi_Nixie_v1.ino
 
 The sketch on the ESP8266 works OK as long as there is a reply on each incoming  request or command. This is the case for all E-type commands. The E41 command replies with a E41 answer, ie. Other commands like E3 react with 2 replies: E31 and at the end a E30. This sequence is not yet implemented in the ESP8266 code. I have to work on that. But the first reply should already arrive at the ESP8266, but it is not the case.
+
+- Schematic_Nixie Clock_2021-12-28_Sheet_1.pdf - contains the power supplies for the different parts: +5V for all modules and sensors,^(Arduino & Nixie tubes).
+- Schematic_Nixie Clock_2021-12-28_Sheet_2.pdf - wiring nixie tubes
+- Schematic_Nixie Clock_2021-12-28_Sheet_3.pdf - wiring all modules & sensors
+- Schematic_Nixie Clock_2021-12-28_Sheet_4.pdf - wiring LED's
+
+The important part hier is sheet 3 where you can see how the Arduino mega is wired to the ESP8266 wemos D1 mini.
+1 remark: the schematics show a capacitor between different parts of GND's. In the real world that capacitor is not there, so only 1 GND exists for the complete PCB. As far as I can tell, this does not harm at all. Even the sound is without noise, only very little hum from the amplifiers is noticable (one only hear it when you put your ear very close to the speakers.

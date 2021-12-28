@@ -18,4 +18,11 @@ The remote controls the display functions of the clock and the world clock funct
 REMAINING ISSUES:
 - communication between Arduino and ESP8266 Wemos D1 mini only works from ESP8266 to Arduino. I can't figure out what's the problem.
 I have another clock project (with LED's) with the same type Arduino and ESP8266 where the communication is no issue at all. That project also contains DCF77, the same sensors, RTC and FRAM. The main difference are the nixie tubes. The code used on that ESP8266 is the same and most of the Arduino code is that too. Anyway ...
-I already tried to use other pins on the Arduino mega, I tried softwareserial and another hardware serial. I tried another ESP8266 ... still and always the same problem.
+I already tried to use other pins on the Arduino mega, I tried software serial and another hardware serial (Serial2). I tried another ESP8266 ... still and always the same problem.
+I also tested the communication over wifi between ESP8266 and my smartphone. That works fine.
+
+Files:
+- sketch Arduino: Simple_Clock_Ivan_V2.0_1.ino
+- sketch ESP8266: ESP8266_wifi_Nixie_v1.ino
+
+The sketch on the ESP8266 works OK as long as there is a reply on each incoming  request or command. This is the case for all E-type commands. The E41 command replies with a E41 answer, ie. Other commands like E3 react with 2 replies: E31 and at the end a E30. This sequence is not yet implemented in the ESP8266 code. I have to work on that. But the first reply should already arrive at the ESP8266, but it is not the case.

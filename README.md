@@ -32,5 +32,8 @@ The sketch on the ESP8266 works OK as long as there is a reply on each incoming 
 - Schematic_Nixie Clock_2021-12-28_Sheet_3.pdf - wiring all modules & sensors
 - Schematic_Nixie Clock_2021-12-28_Sheet_4.pdf - wiring LED's
 
-The important part hier is sheet 3 where you can see how the Arduino mega is wired to the ESP8266 wemos D1 mini.
-1 remark: the schematics show a capacitor between different parts of GND's. In the real world that capacitor is not there, so only 1 GND exists for the complete PCB. As far as I can tell, this does not harm at all. Even the sound is without noise, only very little hum from the amplifiers is noticable (one only hear it when you put your ear very close to the speakers.
+The most important part is sheet 3 where you can see how the Arduino mega is wired to the ESP8266 wemos D1 mini.
+
+REMARKS:
+- the schematics show a capacitor between different parts of GND's. In the real world that capacitor is not there, so only 1 GND exists for the complete PCB. As far as I can tell, this does not harm at all. Even the sound is without noise, only very little hum from the amplifiers is noticable (one only hear it when you put your ear very close to the speakers.
+- Sheet 3: "P2" is the connector to attach the CO2 sensor, "H3-LICHT-S2" is the connector to attach the ldr (light detection), "H2-PWR_ARDUINO" is the connector to power the Arduino since it sticks over the pcb, "H5-D7&D8->P2" is a connector for 2 pins of the sound bourd VS1053B (this also sticks out over the pcb - reachable from the outside of the frame).

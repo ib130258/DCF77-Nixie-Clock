@@ -27,7 +27,7 @@ Files:
 
 The sketch on the ESP8266 works OK as long as there is a reply on each incoming  request or command. This is the case for all E-type commands. The E41 command replies with a E41 answer, ie. Other commands like E3 react with 2 replies: E31 and at the end a E30. This sequence is not yet implemented in the ESP8266 code. I have to work on that. But the first reply should already arrive at the ESP8266, but it is not the case.
 
-- Schematic_Nixie Clock_2021-12-28_Sheet_1.pdf - contains the power supplies for the different parts: +5V for all modules and sensors,^(Arduino & Nixie tubes).
+- Schematic_Nixie Clock_2021-12-28_Sheet_1.pdf - contains the power supplies for the different parts: +5V for all modules and sensors,^(Arduino & Nixie tubes), +9V for the Arduino and +170V for the nixie tubes.
 - Schematic_Nixie Clock_2021-12-28_Sheet_2.pdf - wiring nixie tubes
 - Schematic_Nixie Clock_2021-12-28_Sheet_3.pdf - wiring all modules & sensors
 - Schematic_Nixie Clock_2021-12-28_Sheet_4.pdf - wiring LED's
